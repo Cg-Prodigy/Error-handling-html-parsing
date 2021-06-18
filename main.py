@@ -6,7 +6,7 @@ def errorHandler(url):
     try:
         urlObj=urlopen(url)
     except HTTPError as e:
-        return e
+        return "{e}. Server doesn't exist. Error retrieving the page"
     except URLError:
         return 'Mistyped URL or Server is currently down'
     try:
